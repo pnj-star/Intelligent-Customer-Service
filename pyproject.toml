@@ -1,0 +1,26 @@
+[project]
+name = "intelligent-customer-service"
+version = "0.1.0"
+description = "LangGraph customer service workflow built on retrieve_skill and nl2sql_skill."
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph>=1.2,<2",
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "mcp>=1.2,<2",
+]
+
+[project.scripts]
+customer-service-mcp = "customer_service.mcp:main"
+customer-service-api = "customer_service.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/customer_service"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "components/common_core/src", "components/retrieve_skill/src", "components/nl2sql_skill/src"]
+testpaths = ["tests"]

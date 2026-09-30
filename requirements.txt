@@ -1,0 +1,17 @@
+# Docker 是推荐方式；本文件供不使用 Docker 的 Python 环境使用。
+langgraph>=1.2,<2
+fastapi>=0.115
+uvicorn>=0.30
+mcp>=1.2,<2
+openai>=1.60
+sentence-transformers>=3.3,<6
+pymilvus>=2.5,<3
+redis>=5.2
+tiktoken>=0.8
+pymysql>=1.1
+DBUtils>=3.1
+sqlglot>=23.0
+pyyaml>=6.0
+prometheus-client>=0.20
+PyJWT[crypto]>=2.8
+python-dotenv>=1.0

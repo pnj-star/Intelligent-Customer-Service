@@ -1,0 +1,34 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+
+# Runtime state
+.langgraph_api/
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local model/cache artifacts
+models/
+hf_cache/

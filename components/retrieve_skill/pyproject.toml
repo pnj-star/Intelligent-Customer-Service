@@ -1,0 +1,31 @@
+[project]
+name = "retrieve-skill"
+version = "0.1.1"
+description = "Reusable retrieval pipeline skill built on common_core providers."
+requires-python = ">=3.11"
+dependencies = [
+  "common-core[llm,vector,cache,embedding]>=0.1.1,<0.2",
+  "tiktoken>=0.8",
+]
+
+[project.optional-dependencies]
+mysql = ["pymysql>=1.1", "DBUtils>=3.1"]
+mcp = ["mcp>=1.2,<2"]
+test = ["pytest>=8.0,<9"]
+
+[project.scripts]
+retrieve-skill-mcp = "retrieve_skill.mcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/retrieve_skill"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

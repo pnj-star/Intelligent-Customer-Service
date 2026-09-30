@@ -1,0 +1,8 @@
+{
+  "$schema": "https://langgra.ph/schema.json",
+  "dependencies": ["."],
+  "graphs": {
+    "customer_service": "customer_service.graph:create_graph"
+  },
+  "env": ".env"
+}
